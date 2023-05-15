@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
 
-router.post('/', (req, res)=>{
+router.post('/api/create', (req, res)=>{
 
     res.send('some news')
 } )

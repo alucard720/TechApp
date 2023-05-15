@@ -43,18 +43,25 @@ const validateForm = ()=>{
     return true;
 }
  
-form.addEventListener('submit',(e)=>{
+form.addEventListener('submit', async (e)=>{
     e.preventDefault();
 
 
 const valid = validateForm()
+
 if(valid){
-    fetch('http://localhost:5000/api/create',{
+    const formData = new FormData(form)
+   await postData(formData);
+ 
+}
+});
+
+const postData = async (data) =>{
+    const result = await fetch('/api/create',{
         method:'POST',
-        body:{title:'', content:''},
-        headers:{'Content-Type':'application/json'},
+        body:data,
+       
+       
     })
 }
 
-
-})

@@ -3,7 +3,7 @@ const newsRouter = require('./routers/news')
 const app = express();
 
 app.use(express.static('public'))
-app.use('api', newsRouter) 
+app.use('/api', newsRouter) 
 
 
 
