@@ -49,7 +49,11 @@ form.addEventListener('submit',(e)=>{
 
 const valid = validateForm()
 if(valid){
-    //Submit Form
+    fetch('http://localhost:5000/api/create',{
+        method:'POST',
+        body:{title:'', content:''},
+        headers:{'Content-Type':'application/json'},
+    })
 }
 
 
