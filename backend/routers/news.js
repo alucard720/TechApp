@@ -11,8 +11,9 @@ router.post('/create', uploads.single('thumbnail'),async (req, res)=>{
     console.log('file', req.file)
     console.log('body', req.body)
 
-    fs.access('./data/uploads', (err)=>{
-        if(err){
+    fs.access('./backend/data/uploads', (err)=>{
+        
+        if(!err){
             fs.mkdirSync('./data/uploads');
         }
 
@@ -23,3 +24,4 @@ router.post('/create', uploads.single('thumbnail'),async (req, res)=>{
 })
 
 module.exports = router;
+
