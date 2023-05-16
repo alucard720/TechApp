@@ -37,8 +37,6 @@ const validateForm = ()=>{
         return displayMessage('have to be a image','red')
     }
     
-    
-  
 
     return true;
 }
